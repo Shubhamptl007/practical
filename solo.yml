@@ -1,1 +1,9 @@
 
+- hosts: aws_ec2
+  tasks:
+      
+     - name: splunk restart
+       become: yes
+       become_user: root
+       command:
+             cmd: /opt/splunk/bin/splunk restart
