@@ -1,10 +1,13 @@
 - hosts: slave1, slave2, slave3
   tasks:
+  
      - name: splunk restart for save password properly
        become: yes
        become_user: root
+       debug:
+          msg: "{{ master }}"
        command:
-             cmd: /opt/splunk/bin/splunk edit cluster-config -mode slave -master_uri https://{{ master }}:8089 -replication_port 8085 -secret 12345678 -auth admin:shubham123
+             cmd: /opt/splunk/bin/splunk edit cluster-config -mode slave -master_uri https://msg:8089 -replication_port 8085 -secret 12345678 -auth admin:shubham123
           
      - name: splunk restart for save password properly
        become: yes
