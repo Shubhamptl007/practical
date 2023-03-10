@@ -1,6 +1,7 @@
 - hosts: slave1, slave2, slave3
   tasks:
-    - debug: var="Server2 IP address is {{ hostvars[ 'master' ].ansible_default_ipv4.address }}"
+    - debug: 
+        msg: "Server2 IP address is {{ hostvars[ 'master' ].ansible_default_ipv4.address }}"
  
 
 
