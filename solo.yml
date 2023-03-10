@@ -5,7 +5,7 @@
        become: yes
        become_user: root
        command:
-             cmd: /opt/splunk/bin/splunk edit cluster-config -mode slave -master_uri https://inventory_hostname in groups['master']:8089 -replication_port 8085 -secret 12345678 -auth admin:shubham123
+             cmd: /opt/splunk/bin/splunk edit cluster-config -mode slave -master_uri https://['master']:8089 -replication_port 8085 -secret 12345678 -auth admin:shubham123
           
      - name: splunk restart for save password properly
        become: yes
