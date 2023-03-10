@@ -1,4 +1,4 @@
-- hosts: master
+- hosts: slave
   tasks:
      - debug:
          msg: "{{ ansible_ssh_host }}"
