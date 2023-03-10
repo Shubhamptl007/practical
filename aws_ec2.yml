@@ -4,7 +4,7 @@ aws_secret_key: sjfWzvimzza23yL161h65tn8LtmHC6lnsW64p2hP
 
 groups:
  slave: 
-     macmini2: "'DEV1' in tags.Environment", "'DEV0' in tags.Environment"
+     macmini2: "'DEV1, DEV0' in tags.Environment"
      
      
  master: "'DEV2' in tags.Environment"
