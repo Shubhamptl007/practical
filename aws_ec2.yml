@@ -6,7 +6,7 @@ hostnames:
     - ip-address
     
 groups:
- slave: "'DEV1' in tags.Environment"
+ slave1: "'DEV1' in tags.Environment"
  slave2: "'DEV2' in tags.Environment"
      
    
