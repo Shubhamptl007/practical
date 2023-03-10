@@ -1,4 +1,13 @@
-- hosts: slave1, slave2
+- hosts: slave1, slave2, slave3
   tasks:
-     - debug:
-         msg: "{{ ansible_ssh_host }}"
+     - name: splunk restart for save password properly
+       become: yes
+       become_user: root
+       command:
+             cmd: /opt/splunk/bin/splunk edit cluster-config -mode slave -master_uri https://master:8089 -replication_port 8085 -secret 12345678 -auth admin:shubham123
+          
+     - name: splunk restart for save password properly
+       become: yes
+       become_user: root
+       command:
+            cmd: /opt/splunk/bin/splunk restart
