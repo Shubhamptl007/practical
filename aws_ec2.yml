@@ -2,6 +2,9 @@ plugin: aws_ec2
 aws_access_key: AKIA6NA7CYQZX3FEVAUH
 aws_secret_key: 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
 
+hostnames:
+    - ip-address
+    
 groups:
  slave: "'DEV1' in tags.Environment"
      
