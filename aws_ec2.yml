@@ -7,6 +7,7 @@ hostnames:
     
 groups:
  slave: "'DEV1' in tags.Environment"
+ slave2: "'DEV2' in tags.Environment"
      
    
  
