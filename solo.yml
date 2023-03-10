@@ -1,8 +1,4 @@
-- hosts: redhat
+- hosts: master
   tasks:
-      
-     - name: splunk restart
-       become: yes
-       become_user: root
-       command:
-             cmd: /opt/splunk/bin/splunk stop
+     - debug:
+         msg: "{{ ansible_ssh_host }}"
