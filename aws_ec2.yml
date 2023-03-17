@@ -11,6 +11,9 @@ groups:
  slave2: "'DEV2' in tags.Environment"
  slave3: "'DEV3' in tags.Environment"
      
+keyed_groups:
+  - key: tags.Name
+
    
  
 
